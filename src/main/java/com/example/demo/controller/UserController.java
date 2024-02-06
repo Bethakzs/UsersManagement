@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+package com.example.demo.controller;
 
 import com.example.demo.DTO.UserDTO;
 import io.swagger.v3.oas.annotations.Operation;
@@ -6,19 +6,19 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.entity.User;
-import com.example.demo.services.UserService;
+import com.example.demo.service.UserService;
 
 import java.util.List;
 
 @CrossOrigin
 @Tag(name = "main_methods")
 @RestController
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
