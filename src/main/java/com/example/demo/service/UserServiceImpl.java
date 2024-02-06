@@ -1,18 +1,17 @@
-package com.example.demo.services;
+package com.example.demo.service;
 
+import com.example.demo.entity.User;
+import com.example.demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import com.example.demo.entity.User;
-import com.example.demo.repository.UserRepository;
 
 import java.util.List;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class UserService {
-
+public class UserServiceImpl implements UserService{
     private final UserRepository userRepository;
 
     public List<User> getAllUsers() {
@@ -42,3 +41,4 @@ public class UserService {
         return userRepository.findUserByEmail(email);
     }
 }
+
